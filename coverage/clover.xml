@@ -1,66 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1669401280722" clover="3.2.0">
-  <project timestamp="1669401280722" name="All files">
-    <metrics statements="39" coveredstatements="39" conditionals="14" coveredconditionals="14" methods="11" coveredmethods="11" elements="64" coveredelements="64" complexity="0" loc="39" ncloc="39" packages="3" files="4" classes="4"/>
-    <package name="examples.TDDvsTLD">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="mathFunctions.ts" path="C:\Users\Remym\pythonProject\react-adv-hand-on\04-minesweeper\examples\TDDvsTLD\mathFunctions.ts">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src">
-      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-      <file name="App.tsx" path="C:\Users\Remym\pythonProject\react-adv-hand-on\04-minesweeper\src\App.tsx">
-        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.helpers">
-      <metrics statements="30" coveredstatements="30" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="6"/>
-      <file name="CellsManipulator.ts" path="C:\Users\Remym\pythonProject\react-adv-hand-on\04-minesweeper\src\helpers\CellsManipulator.ts">
-        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="7" count="5" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="23" count="31" type="cond" truecount="4" falsecount="0"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="24" type="cond" truecount="1" falsecount="0"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="32" count="2" type="stmt"/>
-        <line num="34" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="40" count="3" type="stmt"/>
-      </file>
-      <file name="Field.ts" path="C:\Users\Remym\pythonProject\react-adv-hand-on\04-minesweeper\src\helpers\Field.ts">
-        <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="17" count="24" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="7" type="cond" truecount="3" falsecount="0"/>
-        <line num="22" count="2" type="stmt"/>
-        <line num="24" count="5" type="stmt"/>
-        <line num="25" count="5" type="stmt"/>
-        <line num="27" count="5" type="stmt"/>
-        <line num="29" count="5" type="stmt"/>
-        <line num="30" count="16" type="stmt"/>
-        <line num="31" count="110" type="cond" truecount="1" falsecount="0"/>
-        <line num="32" count="110" type="cond" truecount="1" falsecount="0"/>
-        <line num="33" count="7" type="stmt"/>
-        <line num="34" count="7" type="stmt"/>
-        <line num="36" count="110" type="stmt"/>
-        <line num="40" count="5" type="stmt"/>
-      </file>
-    </package>
+<coverage generated="1669417592755" clover="3.2.0">
+  <project timestamp="1669417592756" name="All files">
+    <metrics statements="32" coveredstatements="32" conditionals="12" coveredconditionals="12" methods="6" coveredmethods="6" elements="50" coveredelements="50" complexity="0" loc="32" ncloc="32" packages="1" files="2" classes="2"/>
+    <file name="CellsManipulator.ts" path="C:\Users\Remym\pythonProject\react-adv-hand-on\04-minesweeper\src\helpers\CellsManipulator.ts">
+      <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="12" count="32" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="256" type="cond" truecount="4" falsecount="0"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="39" count="32" type="stmt"/>
+      <line num="41" count="32" type="stmt"/>
+      <line num="42" count="256" type="cond" truecount="1" falsecount="0"/>
+      <line num="43" count="195" type="stmt"/>
+      <line num="44" count="195" type="stmt"/>
+      <line num="46" count="195" type="cond" truecount="1" falsecount="0"/>
+      <line num="47" count="166" type="stmt"/>
+      <line num="52" count="32" type="stmt"/>
+    </file>
+    <file name="Field.ts" path="C:\Users\Remym\pythonProject\react-adv-hand-on\04-minesweeper\src\helpers\Field.ts">
+      <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="19" count="34" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="23" count="8" type="cond" truecount="3" falsecount="0"/>
+      <line num="24" count="2" type="stmt"/>
+      <line num="26" count="6" type="stmt"/>
+      <line num="27" count="6" type="stmt"/>
+      <line num="29" count="6" type="stmt"/>
+      <line num="31" count="6" type="stmt"/>
+      <line num="32" count="17" type="stmt"/>
+      <line num="33" count="108" type="cond" truecount="1" falsecount="0"/>
+      <line num="35" count="105" type="cond" truecount="1" falsecount="0"/>
+      <line num="36" count="32" type="stmt"/>
+      <line num="37" count="32" type="stmt"/>
+      <line num="38" count="32" type="stmt"/>
+      <line num="40" count="105" type="stmt"/>
+      <line num="44" count="3" type="stmt"/>
+    </file>
   </project>
 </coverage>

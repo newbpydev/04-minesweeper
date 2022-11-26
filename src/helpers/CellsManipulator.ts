@@ -28,7 +28,7 @@ export const getNeighboursItems = ([y, x]: Coords): Record<
  * @returns {boolean}
  */
 export const checkItemInField = ([y, x]: Coords, { length }: Field): boolean =>
-  y > 0 && x > 0 && length - y > 0 && length - x > 0;
+  y >= 0 && x >= 0 && length - y > 0 && length - x > 0;
 /**
  * Increment neighbour items for cell with coords
  * @param {Coords} coords

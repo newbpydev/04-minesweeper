@@ -1,6 +1,8 @@
-import { emptyFieldGenerator, fieldGenerator, CellState } from "./Field";
+import { emptyFieldGenerator, fieldGenerator, CellState, Cell } from "./Field";
 
 const { empty, bomb, hidden } = CellState;
+
+const cellWithBombFilter = (cell: Cell) => cell === bomb;
 
 describe("Field Generator", () => {
   describe("emptyFieldGenerator tests", () => {
@@ -52,6 +54,7 @@ describe("Field Generator", () => {
         [empty, empty, empty, empty, empty, empty, empty, empty, empty, empty],
       ]);
     });
+
     // @ smallest possible field with mine
     it("Smallest possible field with mines", () => {
       expect(fieldGenerator(1, 1)).toStrictEqual([[bomb]]);
@@ -65,14 +68,15 @@ describe("Field Generator", () => {
     });
     // @ 2x2 field with 50% probability
     it("2x2 field with 50% probability", () => {
-      const field = fieldGenerator(2, 0.5);
-      const flatField = field.flat();
+      const field = fieldGenerator(2, 0.5); //?
+      const flatField = field.flat(); //?
 
-      console.table(field); //?
-      console.table(flatField); //?
+      // console.table(field);
+      // console.table(flatField);
 
       const cellsWithBombs = flatField.filter((cell) => cell === bomb); //?
-      const emptyCells = flatField.filter((cell) => cell === empty); //?
+      const emptyCells = flatField.filter((cell) => cell === 2); //?
+      // const emptyCells = flatField.filter((cell) => cell === empty); //?
 
       expect(cellsWithBombs).toHaveLength(2);
       expect(emptyCells).toHaveLength(2);
@@ -81,6 +85,20 @@ describe("Field Generator", () => {
       //   [bomb, bomb],
       //   [bomb, bomb],
       // ]);
+    });
+
+    it("Real game field size = 10x10 with 1/4 mixed cells (~25 mines)", () => {
+      const size = 10;
+      const mines = 25;
+
+      const probability = mines / (size * size);
+      const field = fieldGenerator(size, probability);
+
+      console.table(field);
+
+      const flatField = field.flat();
+
+      expect(flatField.filter(cellWithBombFilter)).toHaveLength(25);
     });
 
     // @ 2x2 field with 50% probability
