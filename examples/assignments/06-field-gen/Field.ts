@@ -1,3 +1,4 @@
+import { emptyFieldGenerator } from "./../../../src/helpers/Field";
 import {
   Field,
   CellState,
@@ -29,5 +30,23 @@ export const fieldGenerator = (size: number, probability: number): Field => {
     throw new Error("Probability must be between 0 and 1");
   }
   // here is your code
-  return [[]];
+  let unprocessedCells = size * size;
+  let restCellsWithBombs = unprocessedCells * probability;
+  const result: Field = generateFieldWithDefaultState(size);
+
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      if (restCellsWithBombs === 0) return result;
+
+      if (restCellsWithBombs / unprocessedCells > Math.random()) {
+        result[y][x] = CellState.bomb;
+        incrementNeibours([y, x], result);
+        restCellsWithBombs--;
+      }
+      unprocessedCells--;
+    }
+  }
+
+  return result;
+  // return [[]];
 };
