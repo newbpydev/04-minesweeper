@@ -27,7 +27,7 @@ export const CellState: Record<string, Cell> = {
  */
 export const generateFieldWithDefaultState = (
   size: number,
-  state: Cell = CellState.empty
+  state: Cell = CellState.empty,
 ): Field => new Array(size).fill(null).map(() => new Array(size).fill(state));
 
 /**
@@ -69,7 +69,7 @@ export const checkItemInField = ([y, x]: Coords, field: Field): boolean => {
  */
 export const getNeigboursCoords = (coords: Coords, field: Field): Coords[] =>
   Object.values(getPossibleNeigboursItems(coords)).filter(([y, x]) =>
-    checkItemInField([y, x], field)
+    checkItemInField([y, x], field),
   );
 
 /**
@@ -80,7 +80,7 @@ export const getNeigboursCoords = (coords: Coords, field: Field): Coords[] =>
  */
 export const getNeigboursWithInfoCoords = (
   coords: Coords,
-  field: Field
+  field: Field,
 ): Coords[] => {
   const { empty: e, bomb: b } = CellState;
   return getNeigboursCoords(coords, field).filter(([y, x]) => {
