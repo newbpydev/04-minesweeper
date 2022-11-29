@@ -1,4 +1,4 @@
-import { Cell, Coords, Field } from './Field';
+import { Cell, Coords, Field } from "./Field";
 
 /**
  * Get neighbour cells indexes

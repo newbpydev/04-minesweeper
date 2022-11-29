@@ -1,10 +1,10 @@
-import { emptyFieldGenerator } from './../../../src/helpers/Field';
+import { emptyFieldGenerator } from "./../../../src/helpers/Field";
 import {
   Field,
   CellState,
   incrementNeibours,
   generateFieldWithDefaultState,
-} from './helpers';
+} from "./helpers";
 
 /**
  * Generate field with mines
@@ -27,7 +27,7 @@ import {
  */
 export const fieldGenerator = (size: number, probability: number): Field => {
   if (probability < 0 || probability > 1) {
-    throw new Error('Probability must be between 0 and 1');
+    throw new Error("Probability must be between 0 and 1");
   }
   // here is your code
   let unprocessedCells = size * size;
